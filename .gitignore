@@ -1,0 +1,48 @@
+# Root-level ignores (optional OS or editor files)
+.DS_Store
+Thumbs.db
+*.log
+
+# Ignore node_modules in both client and server
+client/node_modules/
+server/node_modules/
+
+# Ignore build and dist outputs
+client/build/
+server/dist/
+
+# Ignore environment variables
+client/.env
+server/.env
+
+# Ignore TypeScript cache
+client/tsconfig.tsbuildinfo
+server/tsconfig.tsbuildinfo
+
+# Logs
+client/npm-debug.log*
+server/npm-debug.log*
+client/yarn-debug.log*
+server/yarn-debug.log*
+client/yarn-error.log*
+server/yarn-error.log*
+
+# IDE folders
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Mac system files
+*.DS_Store
+
+# Windows system files
+ehthumbs.db
+Thumbs.db
+
+# Optional: Ignore database dumps or temp files
+*.sql
+*.sqlite
+*.bak
