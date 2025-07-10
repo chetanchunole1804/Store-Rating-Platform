@@ -1,4 +1,5 @@
 import axios from "axios";
+import { withAuth } from "./tokenService";
 
 const API = axios.create({
   baseURL: import.meta.env.VITE_API_URL || "http://localhost:4000/api",
@@ -23,7 +24,9 @@ export const addStore = async (storeData: {
   address: string;
   category?: string;
 }) => {
-  const res = await API.post("/stores", storeData);
+  const res = await API.post("/stores", storeData, {
+    headers: withAuth(),
+  });
   return res.data;
 };
 

@@ -3,6 +3,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { AuthProvider } from "./context/AuthContext";
 import { ThemeContextProvider, useThemeContext } from "./context/ThemeContext";
+import { ToastProvider } from "./components/shared/Toast";
 
 import AppLayout from "./components/layout/AppLayout";
 import AuthGuard from "./components/layout/AuthGuard";
@@ -111,6 +112,7 @@ export default function App() {
     <Router>
       <AuthProvider>
         <ThemeContextProvider>
+          <ToastProvider />
           <AppContent />
         </ThemeContextProvider>
       </AuthProvider>
