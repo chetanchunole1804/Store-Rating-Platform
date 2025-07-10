@@ -11,6 +11,8 @@ import { typeOrmConfig } from './config/typeorm.config';
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
     TypeOrmModule.forRoot(typeOrmConfig),
+
+    // ✅ Application feature modules
     AuthModule,
     UsersModule,
     StoresModule,

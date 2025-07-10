@@ -5,11 +5,11 @@ import { Rating } from '../ratings/rating.entity';
 
 export const typeOrmConfig: TypeOrmModuleOptions = {
   type: 'mysql',
-  host: 'localhost',
-  port: 3306,
-  username: 'root',
-  password: 'your_password',
-  database: 'store_rating_db',
+  host: process.env.DB_HOST || 'localhost',
+  port: parseInt(process.env.DB_PORT || '3306', 10),
+  username: process.env.DB_USERNAME || 'root',
+  password: process.env.DB_PASSWORD || 'root',
+  database: process.env.DB_NAME || 'store_rating_db',
   entities: [User, Store, Rating],
   synchronize: true,
 };
