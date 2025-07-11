@@ -1,0 +1,30 @@
+CREATE DATABASE IF NOT EXISTS store_rating_db;
+USE store_rating_db;
+
+CREATE TABLE IF NOT EXISTS user (
+  id VARCHAR(36) PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) UNIQUE NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  address TEXT NOT NULL,
+  role ENUM('admin', 'user', 'store-owner') DEFAULT 'user'
+);
+
+CREATE TABLE IF NOT EXISTS store (
+  id VARCHAR(36) PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  address TEXT NOT NULL,
+  category VARCHAR(100),
+  ownerId VARCHAR(36) NOT NULL,
+  FOREIGN KEY (ownerId) REFERENCES user(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS rating (
+  id VARCHAR(36) PRIMARY KEY,
+  storeId VARCHAR(36) NOT NULL,
+  userId VARCHAR(36) NOT NULL,
+  value INT CHECK (value BETWEEN 1 AND 5),
+  comment TEXT,
+  FOREIGN KEY (storeId) REFERENCES store(id) ON DELETE CASCADE,
+  FOREIGN KEY (userId) REFERENCES user(id) ON DELETE CASCADE
+);
