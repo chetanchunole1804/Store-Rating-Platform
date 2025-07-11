@@ -94,3 +94,13 @@ cd server
 npm install
 npm start:dev
 ```
+
+---
+
+## 📚 For more information, check these files:
+
+You can find more detailed documentation and guides in the `docs/` folder:
+
+- [API_ROUTES.md](docs/API_ROUTES.md) — API endpoints and access control
+- [api-test-data.md](docs/api-test-data.md) — Example API test data
+- [Demo.md](docs/Demo.md) — Demo instructions and screenshots
