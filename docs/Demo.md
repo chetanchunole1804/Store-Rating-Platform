@@ -21,7 +21,7 @@ This project is a full-stack **Store Rating Platform** built using React.js (fro
 
 ### 👤 `users` Table
 Shows data after user registration.
-![User Table](./assets/ui/users.png)
+![User Table](./assets/ui/Users.png)
 
 
 ---
