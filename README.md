@@ -1,7 +1,7 @@
 # Store Rating Platform
 
 🚧 **Work in Progress**  
-This full-stack project is currently under development. Some features may not be fully functional or visually polished. Contributions and suggestions are welcome!
+This full-stack project is currently under development. Some features may not be fully functional or visually polished.
 
 ---
 
